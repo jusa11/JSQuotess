@@ -1,0 +1,176 @@
+.main__btn {
+  color: #cad1e9;
+  border: 2px solid transparent;
+  background: linear-gradient(#222222, #131313) padding-box,
+    linear-gradient(45deg, rgba(9, 14, 219, 1), rgba(141, 30, 162, 1))
+      border-box;
+  background-color: #090edb;
+  border-radius: 12px;
+  padding: 0.8em;
+  box-shadow: inset -1px -1px 10px rgba(195, 195, 195, 0.182);
+  transition: all 0.3s ease;
+}
+
+.main__btn::before {
+  content: '';
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 1);
+}
+
+.main__btn:hover {
+  background: linear-gradient(#222222, #131313) padding-box,
+    linear-gradient(29deg, $color-hover, #090edb) border-box;
+  color: #8688f2;
+}
+
+.join-btn__mobile {
+  display: none;
+}
+
+.burger-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(135deg, #6c01b4, #48069e);
+  box-shadow: 0 6px 10px rgba(133, 3, 208, 0.281);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 0 0 60px 0;
+}
+
+.button-quote {
+  background: rgba(0, 0, 0, 0.8);
+  color: #0ff;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-family: 'Fira Code', monospace;
+  text-transform: uppercase;
+  border: 2px solid rgba(0, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  }
+}
+
+.btn-like {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  font-size: 22px;
+
+  &:hover {
+    background: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.btn-copy {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #4caf50; 
+  box-shadow: 0 0 10px #4caf4f86;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 22px;
+  color: #4caf50; 
+  &:hover {
+    background: #4caf50;
+    color: #000;
+  }
+}
+
+.popup-btn_active {
+  padding: 10px;
+  background: $color-hover;
+  border: none;
+  color: $white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #0097a7;
+  }
+}
+
+.popup-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.show-more-btn {
+  grid-column: span 2;
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #444, #222);
+  color: #ddd;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #666;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+.show-more-btn:hover {
+  background: linear-gradient(135deg, #555, #333);
+  color: #fff;
+  border-color: #888;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+}
+
+.show-more-btn:active {
+  background: linear-gradient(135deg, #333, #111);
+  border-color: #777;
+  transform: scale(0.98);
+}
+@include mediaBigMobile {
+  .header-join {
+    display: none;
+  }
+  .join-btn__mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .join__btn {
+    display: none;
+  }
+}
+
+@include mediaSmallMobile {
+  .button-quote {
+    padding: 13px 12px;
+    font-size: 14;
+  }
+}

@@ -1,0 +1,135 @@
+.user-card {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+  border-radius: 12px;
+  gap: 10px;
+  margin: 0;
+  max-width: 240px;
+
+  &.user-card_profile {
+    background: transparent;
+    padding: 0;
+    gap: 10px;
+    margin: 0;
+  }
+}
+
+.user-card__avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border: 2px solid rgb(168, 168, 168);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  opacity: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  &.user-card__avatar_profile {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
+}
+
+.user-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-card__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  transition: color 0.1s ease;
+  cursor: pointer;
+}
+
+.user-card__notifications {
+  font-size: 20px;
+  color: #e3a404;
+  cursor: pointer;
+  margin: 0 0 0 3px;
+}
+
+.user-card__level {
+  font-size: 12px;
+  padding: 4px 0 0 0;
+  color: #aaa;
+}
+
+.user-card__logout {
+  &.user-card__logout_profile {
+    display: none;
+  }
+}
+
+@include mediaTablet {
+  .user-card__name {
+    max-width: 100px;
+  }
+  .user-card__avatar {
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border: 2px solid rgb(168, 168, 168);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    opacity: 1;
+  }
+}
+
+@include mediaBigMobile {
+  .user-card {
+    background: #1e1e1e;
+    padding: 12px;
+    margin: 0 0 60px 0;
+  }
+
+  .user-card__avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+
+  .user-card__logout {
+    display: flex;
+    font-size: 16px;
+    color: #ff4081;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    padding: 6px 0 0 0;
+    background-color: transparent;
+  }
+
+  .user-card__logout:hover {
+    color: #ff80ab;
+  }
+}

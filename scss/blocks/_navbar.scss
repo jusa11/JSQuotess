@@ -1,0 +1,40 @@
+.profile-navbar {
+  position: sticky;
+  background-color: #0c081b;
+  box-shadow: 0 0 10px rgb(43 43 43);
+  border-radius: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 15px 0;
+}
+
+.navbar-navigation__list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navigation__item-icon {
+  font-size: 35px;
+}
+
+.navbar-stats {
+  display: none;
+}
+@media (min-width: 1154px) {
+  .profile-navbar {
+    display: none;
+  }
+}
+
+@include mediaBigMobile {
+  .navbar-stats {
+    display: block;
+  }
+}
+
+@include mediaSmallMobile {
+  .navbar-navigation__list {
+    gap: 30px;
+  }
+}

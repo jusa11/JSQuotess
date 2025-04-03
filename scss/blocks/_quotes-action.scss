@@ -1,0 +1,33 @@
+.quotes-action__row {
+  display: flex;
+  margin: 180px 0 0 0;
+  gap: 40px;
+}
+.quotes-action__share-quote {
+  flex: 0 1 45%;
+}
+.quotes-action__card {
+  flex: 1 1 55%;
+}
+.quotes-action__column {
+  display: flex;
+  gap: 20px;
+}
+.quotes-action__card {
+  background-image: url('./img/bg-cards-quote_action.png');
+  background-position: center;
+}
+
+@include mediaFirstBrakePoint {
+  .quotes-action__row {
+    margin: 250px 0 0 0;
+  }
+}
+
+@include mediaTablet {
+  .quotes-action__column {
+    gap: 40px;
+    flex-direction: column;
+    width: 100%;
+  }
+}

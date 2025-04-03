@@ -1,0 +1,168 @@
+.header {
+  padding: 25px 0 80px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+// header__nav
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ffffff1f;
+  border-radius: 12px;
+  padding: 1.2em;
+  box-shadow: inset 0px 0px 10px rgba(194, 195, 195, 0.182);
+}
+
+// header__content
+.main-title {
+  font-size: 75px;
+  padding: 100px 0 0 0;
+  line-height: 86px;
+
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.header__quote {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px; 
+  position: relative;
+}
+.header__quote_content {
+  line-height: 1.5em;
+  font-size: 20px;
+  font-weight: medium;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-height: 90px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 70px 0 30px 0;
+  p {
+    max-width: 100%;
+  }
+}
+
+.quote__text,
+.quote__author {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  color: #33ff33;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.quote__text.loading,
+.quote__author.loading {
+  opacity: 0;
+}
+
+.isloading-quote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// buttons
+.header__quote_btn {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: auto;
+}
+
+.button-quote {
+  background: #111;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.quote__author {
+  font-size: 14px;
+}
+
+@include mediaTablet {
+  .main-title {
+    font-size: 65px;
+    padding: 90px 0 0 0;
+    line-height: 70px;
+  }
+  .header__quote_text {
+    padding: 50px 0 0 0;
+  }
+}
+@include mediaBigMobile {
+  .main-title {
+    font-size: 50px;
+    padding: 80px 0 0 0;
+    line-height: 60px;
+  }
+  .header__quote_text {
+    padding: 30px 0 0 0;
+    font-size: 18px;
+  }
+  .header__quote_btn {
+    padding: 30px 0 0 0;
+  }
+}
+@include mediaMediumMobile {
+  .main-title {
+    font-size: 40px;
+    padding: 70px 0 0 0;
+    line-height: 50px;
+  }
+  .header__quote_btn {
+    gap: 20px;
+  }
+}
+@include mediaSmallMobile {
+  .header {
+    min-height: 0;
+  }
+  .main-title {
+    font-size: 26px;
+    padding: 50px 0 0 0;
+    line-height: 40px;
+  }
+  .header__quote_text {
+    padding: 20px 0 0 0;
+    font-size: 16px;
+  }
+  .header__quote_btn {
+    padding: 60px 0 0 0;
+    gap: 10px;
+  }
+  .button-quote__btn_icon {
+    margin: 0 7px 0 0;
+  }
+  .button-quote {
+    font-size: 12px;
+    padding: 15px 15px;
+  }
+}

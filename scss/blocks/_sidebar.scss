@@ -1,0 +1,26 @@
+.profile-sidebar {
+  position: fixed;
+  top: 150px;
+}
+
+.sidebar-navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.active {
+  display: block;
+  background-color: #4941e128;
+  padding: 15px;
+  border-radius: 15px;
+  transition: all 0.1s ease;
+}
+
+.navigation__item-icon {
+  font-size: 25px;
+  color: $white;
+  transition: color 0.2s ease;
+}
+.navigation__item-icon:hover {
+  color: $color-hover;
+}

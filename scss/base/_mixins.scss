@@ -1,0 +1,28 @@
+@mixin mediaFirstBrakePoint {
+  @media (max-width: $first-brakepoint) {
+    @content;
+  }
+}
+
+@mixin mediaTablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mediaBigMobile {
+  @media (max-width: $big-mobile) {
+    @content;
+  }
+}
+@mixin mediaMediumMobile {
+  @media (max-width: $medium-mobile) {
+    @content;
+  }
+}
+
+@mixin mediaSmallMobile {
+  @media (max-width: $small-mobile) {
+    @content;
+  }
+}
+

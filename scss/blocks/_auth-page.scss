@@ -1,0 +1,21 @@
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.auth-page__content {
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.auth-page h1 {
+  font-size: 60px;
+  font-weight: bold;
+  padding: 0 0 70px 0;
+}

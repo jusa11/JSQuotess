@@ -1,0 +1,53 @@
+.popup__card {
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup__card_title {
+  display: flex;
+  align-items: center;
+}
+.popup__card_logo img {
+  max-height: 52px;
+}
+
+.popup__rang {
+  margin: 0 0 0 10px;
+  font-size: 12px;
+  color: $white;
+  padding: 10px 15px;
+  background-color: #ff6161;
+  border-radius: 24px;
+}
+.popup__card_content {
+  margin: 15px 0 0 0;
+  flex: 1 1 auto;
+}
+.popup__card_name {
+  color: #fff;
+}
+.popup__card_text {
+  color: $color-main;
+  margin: 15px 0 0 0;
+}
+.popup__card_handler {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 0 0;
+}
+.popup__card_infavorite {
+  font-size: 12px;
+  padding: 7px 15px;
+}
+
+.popup-close {
+  margin: 15px 0 0 0;
+  padding: 10px 0;
+}
+
+@include mediaBigMobile {
+  .popup__card {
+    max-height: 350px;
+  }
+}

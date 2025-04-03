@@ -1,0 +1,304 @@
+.stats {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  margin: 50px 0 0 0;
+}
+
+.stats-decor_1 {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  top: 0%;
+  left: 11%;
+  background-color: #2f847f;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: rotate(34deg);
+  z-index: 1;
+  border-radius: 36px;
+}
+.stats-decor_2 {
+  position: absolute;
+  transform: rotate(16deg);
+  top: 0%;
+  left: 7%;
+  width: 250px;
+  height: 205px;
+  background-color: #c68e3c;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 36px;
+  z-index: 2;
+}
+.stats-decor_3 {
+  position: absolute;
+  width: 250px;
+  z-index: 3;
+  height: 350px;
+  background: linear-gradient(138deg, #7b20e2, #2b1043);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 36px;
+  padding: 20px 0 0 0;
+}
+.stats-decor__img {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 170px;
+  width: 170px;
+  border: 3px solid rgb(168, 168, 168);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  opacity: 1;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.chart-percent {
+  font-family: $font-stats;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  transform: translate(-50%, -40%);
+  top: 50%;
+  left: 50%;
+}
+.chart-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 50%;
+}
+.stats-userinfo {
+  position: absolute;
+  z-index: 10;
+  top: 75%;
+  left: 0;
+  font-family: $font-stats;
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.stats-user__username {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+.stats-user__level {
+  font-size: 12px;
+  background-color: red;
+  font-weight: bold;
+  padding: 6px 20px;
+  border-radius: 30px;
+  text-align: center;
+  display: inline;
+}
+
+.stats-info {
+  display: flex;
+  margin: 20px 0 0 0;
+}
+
+.stats-total__title {
+  color: #d4d4d4;
+  font-weight: 400;
+  font-size: 12px;
+}
+.stats-total__value {
+  padding: 10px 0 0 0;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+@include mediaFirstBrakePoint {
+  .stats {
+    width: 218px;
+    height: 251px;
+    margin: 0;
+  }
+
+  .stats-decor_1 {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: -4%;
+    left: 11%;
+    background-color: #2f847f;
+    transform: rotate(34deg);
+    z-index: 1;
+    border-radius: 36px;
+  }
+  .stats-decor_2 {
+    position: absolute;
+    transform: rotate(16deg);
+    top: -4%;
+    left: 7%;
+    width: 70%;
+    height: 70%;
+    background-color: #c68e3c;
+    border-radius: 36px;
+    z-index: 2;
+  }
+  .stats-decor_3 {
+    position: absolute;
+    width: 160%;
+    height: 80%;
+    z-index: 3;
+    background: linear-gradient(138deg, #7b20e2, #2b1043);
+    border-radius: 36px;
+  }
+
+  .stats-decor__img {
+    margin: 0 0 0 10px;
+    height: 140px;
+    width: 140px;
+  }
+
+  .chart-stats {
+    height: 150px !important;
+    width: 150px !important;
+  }
+
+  .chart-percent {
+    font-family: $font-stats;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -40%);
+    top: 50%;
+    left: 50%;
+  }
+  .chart-wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 20%;
+  }
+
+  .stats-userinfo {
+    position: absolute;
+    z-index: 10;
+    top: 7%;
+    left: 60%;
+    font-family: $font-stats;
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .stats-user__username {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+  .stats-user__level {
+    font-size: 11px;
+    background-color: red;
+    padding: 6px 20px;
+    border-radius: 30px;
+    text-align: center;
+    display: inline;
+  }
+
+  .stats-info {
+    display: flex;
+    margin: 20px 0 0 0;
+  }
+
+  .stats-total__title {
+    color: #d4d4d4;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .stats-total__value {
+    padding: 10px 0 0 0;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+
+@include mediaBigMobile {
+  .stats-decor_1 {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 0%;
+    left: 11%;
+    background-color: #2f847f;
+    transform: rotate(34deg);
+    z-index: 1;
+    border-radius: 36px;
+  }
+  .stats-decor_2 {
+    position: absolute;
+    transform: rotate(16deg);
+    top: 0%;
+    left: 7%;
+    width: 100%;
+    height: 205px;
+    background-color: #c68e3c;
+    border-radius: 36px;
+    z-index: 2;
+  }
+  .stats-decor_3 {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    height: 350px;
+    background: linear-gradient(138deg, #7b20e2, #2b1043);
+    border-radius: 36px;
+  }
+  .stats-decor__img {
+    margin: 0 auto;
+    height: 170px;
+    width: 170px;
+  }
+  .chart-stats {
+    height: 200px !important;
+    width: 200px !important;
+  }
+  .chart-percent {
+    font-family: $font-stats;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -40%);
+    top: 50%;
+    left: 50%;
+  }
+  .chart-wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 50%;
+  }
+
+  .stats-userinfo {
+    position: absolute;
+    z-index: 10;
+    top: 75%;
+    left: 0;
+    font-family: $font-stats;
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .stats-user__username {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+
+  .stats-total__title {
+    display: block;
+    white-space: normal;
+  }
+}

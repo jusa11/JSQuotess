@@ -1,0 +1,117 @@
+.search-quote__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search-filter {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 20px 0 0px 0;
+  margin: 0 0 -20px 0;
+  z-index: 2;
+}
+
+.search-filter__item {
+  flex: 0 0 auto;
+  font-size: 12px;
+  background-color: rgba(29, 28, 32, 100%);
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 8px 10px;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+}
+
+.filter-active {
+  background-color: #fff;
+  color: black;
+}
+
+.searh-quote__form {
+  display: flex;
+  position: relative;
+  padding: 30px 0 0 0;
+}
+
+.searh-quote__form_wrapper {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: '';
+    background-image: url('/src/img/icon/search.png');
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 13%;
+    left: 3%;
+  }
+}
+
+.searh-quote__form:focus-within .form-reset {
+  color: $white;
+}
+
+.searh-quote__query {
+  position: relative;
+  resize: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  padding: 0 60px;
+  background: rgba(11, 13, 22, 0.258);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  color: #fff;
+  z-index: 2;
+}
+
+.form-search__reset {
+  position: absolute;
+  top: 58%;
+  right: 3%;
+  background-color: transparent;
+  font-size: 23px;
+  color: $color-main;
+  font-weight: bold;
+  transition: all ease-in 0.3s;
+  z-index: 2;
+}
+
+.search-result__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+  margin: 20px 0 30px 0;
+}
+
+@include mediaBigMobile {
+  .search-result__block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include mediaSmallMobile {
+  .search-filter {
+    justify-content: flex-start;
+    margin: 0 0 -10px 0;
+  }
+
+  .search-filter__item {
+    padding: 4px 7px;
+  }
+}
