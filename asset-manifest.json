@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/JSQuotes/static/css/main.b6e073ca.css",
+    "main.js": "/JSQuotes/static/js/main.59847c5d.js",
+    "static/media/bg-cards-quote_action.png": "/JSQuotes/static/media/bg-cards-quote_action.79036f006c0cb5ff1137.png",
+    "static/media/bg-cards-popular.png": "/JSQuotes/static/media/bg-cards-popular.8e1efccbdda12c6acb80.png",
+    "index.html": "/JSQuotes/index.html",
+    "main.b6e073ca.css.map": "/JSQuotes/static/css/main.b6e073ca.css.map",
+    "main.59847c5d.js.map": "/JSQuotes/static/js/main.59847c5d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6e073ca.css",
+    "static/js/main.59847c5d.js"
+  ]
+}
