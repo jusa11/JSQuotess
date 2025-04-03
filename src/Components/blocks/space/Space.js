@@ -17,7 +17,7 @@ const Space = () => {
   const planetRef = useRef([]);
   const popupRef = useRef(null);
   const dispatch = useDispatch();
-  const [currentQuote, setCurrentQuote] = useState({}); 
+  const [currentQuote, setCurrentQuote] = useState({});
   const [isPopup, setPopup] = useState(false);
 
   const orbitData = [
@@ -137,7 +137,7 @@ const Space = () => {
         });
         return () => ctx.revert();
       });
-    }, 100);
+    }, 1000);
   }, [catchThink]);
 
   return (
@@ -155,7 +155,12 @@ const Space = () => {
             );
           })}
           <div className="orbit-center">
-            <img src={process.env.PUBLIC_URL + "/img/space-content/spase-center.png"} alt="" />
+            <img
+              src={
+                process.env.PUBLIC_URL + '/img/space-content/spase-center.png'
+              }
+              alt=""
+            />
           </div>
         </div>
 

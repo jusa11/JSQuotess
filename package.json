@@ -28,7 +28,7 @@
     "swiper": "^11.2.5",
     "uuid": "^11.0.3"
   },
-  "homepage": "https://jusa11.github.io/JSQuotes/",
+  "homepage": "https://jusa11.github.io/JSQuotess/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
